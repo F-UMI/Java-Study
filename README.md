@@ -1,1 +1,1 @@
-# Goorm
+# Solution
