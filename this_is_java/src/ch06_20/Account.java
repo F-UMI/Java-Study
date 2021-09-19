@@ -1,4 +1,4 @@
-package this_is_java_ch06_20;
+package ch06_20;
 
 public class Account {
 	private String ano;
