@@ -1,4 +1,4 @@
-package this_is_java;
+package ch05_09;
 
 import java.util.Scanner;
 
@@ -35,12 +35,13 @@ public class Exercise09 {
 				int maxNum = 0;
 				for (int i = 0; i < scores.length; i++) {
 					avg += scores[i];
-					avg = avg / scores.length;
-				}
-				for (int j = 0; j < scores.length - 1; j++) {
-					if (scores[j] > scores[j + 1]) {
-						maxNum = scores[j];
 
+				}
+				avg = avg / scores.length;
+				for (int j = 0; j < scores.length - 1; j++) {
+					if (scores[j] < scores[j + 1]) {
+						scores[j] = scores[j + 1];
+						maxNum = scores[j];
 					}
 				}
 				System.out.println("최고 점수: " + maxNum);
