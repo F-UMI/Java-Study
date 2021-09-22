@@ -1,4 +1,4 @@
-package ch08_5;
+package ch08_05;
 //익명객체 호출 개념 습득 다시 필요 .
 public class AnonymousExample {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package ch08_5;
+package ch08_05;
 
 public class Anonymous {
 	Vehicle field = new Vehicle() {

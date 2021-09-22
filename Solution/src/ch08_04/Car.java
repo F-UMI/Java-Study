@@ -1,4 +1,4 @@
-package ch08_4;
+package ch08_04;
 
 public class Car {
 	class Tire {

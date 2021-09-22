@@ -1,4 +1,4 @@
-package ch08_4;
+package ch08_04;
 
 public class NestedClassExample {
 	public static void main(String[] args) {
