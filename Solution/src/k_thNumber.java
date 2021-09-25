@@ -1,5 +1,5 @@
 import java.util.Arrays;
-//인덱스 들어가는가 -1 항상 신경써야하는데 그러지 못했다. 코드자체는 맞다.
+//인덱스 들어가는가 -1 항상 신경써야하는데 그러지 못했다. copyofRange의 시작인덱스에서 ArrayOutOfRangeException 발생, -1 추가하여 방지함
 class k_thNumber {
 	public int[] solution(int[] array, int[][] commands) {
 		int[] answer = new int[commands.length];
@@ -8,7 +8,7 @@ class k_thNumber {
 			int[] arrCut = Arrays.copyOfRange(array, commands[i][0] -1 , commands[i][1]);
 			Arrays.sort(arrCut);
 			k = (commands[i][2] - 1);
-			answer[i] = arrCut[k]; //answer 이 재정의 가 되지 않아서 그런거 같은데 어떻게 하라고오ㅗ오오오
+			answer[i] = arrCut[k]; 
 		}	
 		return answer;
 	}
