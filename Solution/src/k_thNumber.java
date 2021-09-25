@@ -1,4 +1,5 @@
 import java.util.Arrays;
+//Lv1_k번째 수
 //인덱스 들어가는가 -1 항상 신경써야하는데 그러지 못했다. copyofRange의 시작인덱스에서 ArrayOutOfRangeException 발생, -1 추가하여 방지함
 class k_thNumber {
 	public int[] solution(int[] array, int[][] commands) {

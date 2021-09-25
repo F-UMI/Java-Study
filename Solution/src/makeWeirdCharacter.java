@@ -1,3 +1,4 @@
+//Lv1_이상한 문자 만들기
 //적중률 68.8%  wHY???
 class makeWeirdCharacter { 
 	public String solution(String s) {
