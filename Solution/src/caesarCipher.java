@@ -1,5 +1,5 @@
 //Lv1_시저 암호 (10)
-class Solution {
+class caesarCipher {
 	public String solution(String s, int n) {
 		String answer = "";
 		char[] charArray = new char[s.length()];
