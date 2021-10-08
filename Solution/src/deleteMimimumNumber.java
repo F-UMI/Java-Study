@@ -1,60 +1,105 @@
-
-//포기 나중으로 미루자
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.List;
-
+//Lv1_제일 작은수 제거하기 (6)  // https://programmers.co.kr/learn/courses/30/lessons/12935
+// 답지않은 문제에 오래걸려버림 
 class deleteMimimumNumber {
-    public int[] solution(int[] arr) {
-
-    	int length = arr.length;
-    	int[] answer = new int[length];
-        if (length == 1) {
+	public int[] solution(int[] arr) {
+		int length = arr.length;
+		int[] answer = {};
+		if (length == 1) {
+			answer = new int[1];
 			answer[0] = -1;
 			return answer;
 		}
-        int elementToDelete = 0;
-        Integer[] ListArray = new Integer[length];
-        for (int i = 0; i < arr.length-1; i++) {
-        	ListArray[i] = arr[i];
-        	if (arr[i] < arr[i+1]) {
+
+		int elementToDelete = FindElementToDelete(arr);
+		int countMinimumNum = CountMinimumNum(elementToDelete, arr);
+		answer = new int[length - countMinimumNum];
+		int count = 0;
+
+		for (int i = 0, j = 0; i < arr.length; i++) {
+			if (arr[i] != elementToDelete) {
+				answer[j] = arr[i];
+				j++;
+
+			}
+			if (arr[i] == elementToDelete) {
+
+			}
+
+		}
+
+		return answer;
+	}
+
+	public int FindElementToDelete(int arr[]) {
+		int elementToDelete = arr[0];
+		;
+		for (int i = 0; i < arr.length; i++) {
+			if (elementToDelete > arr[i]) {
 				elementToDelete = arr[i];
 			}
 		}
-        for (int i = 0; i < answer.length; i++) {
+		return elementToDelete;
+	}
+
+	public int CountMinimumNum(int elementToDelete, int[] arr) {
+		int count = 0;
+		for (int i = 0; i < arr.length; i++) {
 			if (arr[i] == elementToDelete) {
-				ListArray = removeElementUsingCollection(ListArray, i);
+				count++;
 			}
 		}
-        for (int i = 0; i < ListArray.length; i++) {
-			answer[i] = ListArray[i];
-		}
-        
-        
-        return answer;
-    }
-    
-    public static Integer[] removeElementUsingCollection( Integer[] arr, int index ){
-        List<Integer> tempList = new ArrayList<Integer>(Arrays.asList(arr));
-        tempList.remove(index);
-        return tempList.toArray(new Integer[0]);
-    }
+		return count;
+	}
+
+	public static void main(String[] args) {
+		int[] arr = { 4, 3, 2, 1 };
+		deleteMimimumNumber sol = new deleteMimimumNumber();
+		sol.solution(arr);
+
+	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+////�룷湲� �굹以묒쑝濡� 誘몃（�옄
+//import java.util.Arrays;
+//import java.util.ArrayList;
+//import java.util.List;
+//
+//class deleteMimimumNumber {
+//    public int[] solution(int[] arr) {
+//
+//    	int length = arr.length;
+//    	int[] answer = new int[length];
+//        if (length == 1) {
+//			answer[0] = -1;
+//			return answer;
+//		}
+//        int elementToDelete = 0;
+//        Integer[] ListArray = new Integer[length];
+//        for (int i = 0; i < arr.length-1; i++) {
+//        	ListArray[i] = arr[i];
+//        	if (arr[i] < arr[i+1]) {
+//				elementToDelete = arr[i];
+//			}
+//		}
+//        for (int i = 0; i < answer.length; i++) {
+//			if (arr[i] == elementToDelete) {
+//				ListArray = removeElementUsingCollection(ListArray, i);
+//			}
+//		}
+//        for (int i = 0; i < ListArray.length; i++) {
+//			answer[i] = ListArray[i];
+//		}
+//        
+//        
+//        return answer;
+//    }
+//    
+//    public static Integer[] removeElementUsingCollection( Integer[] arr, int index ){
+//        List<Integer> tempList = new ArrayList<Integer>(Arrays.asList(arr));
+//        tempList.remove(index);
+//        return tempList.toArray(new Integer[0]);
+//    }
+//}
 
 //class Solution {
 //	public int[] solution(int[] arr) {
