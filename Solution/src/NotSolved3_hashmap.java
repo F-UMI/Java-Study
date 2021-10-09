@@ -1,6 +1,6 @@
 //Lv_1 완주하지 못한 선수 // https://programmers.co.kr/learn/courses/30/lessons/42576?language=java
 // 21.10 .08 효율성 문제로 해쉬 개념 다시 익힌다음 풀어볼것 
-class Solution {
+class NotSolved3_hashmap{
     public String solution(String[] participant, String[] completion) {
         String answer = "";
         return answer; 
