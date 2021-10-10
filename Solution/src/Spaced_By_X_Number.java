@@ -1,5 +1,5 @@
 //Lv_1 x만큼  간격있는 n개의 숫자 (4)  //  https://programmers.co.kr/learn/courses/30/lessons/12954
-class Solution {
+class Spaced_By_X_Number {
 	static long constants;
 	public long[] solution(int x, int n) {
 		long[] answer = new long[n];
