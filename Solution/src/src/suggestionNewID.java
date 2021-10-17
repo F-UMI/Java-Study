@@ -1,4 +1,7 @@
+package src;
+
 import java.util.regex.Pattern;
+
 //다시
 class suggestionNewID {
     public String solution(String new_id) {

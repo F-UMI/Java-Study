@@ -1,3 +1,5 @@
+package src;
+
 //Lv1_숫자 문자열과 영단어- 2021 카카오채용연계형 인턴쉽(2) // 21.10. 16 //https://programmers.co.kr/learn/courses/30/lessons/81301
 class Number_String_EnglishWord {
     public int solution(String s) {
@@ -37,9 +39,9 @@ class Number_String_EnglishWord {
         return answer;
     }
 
-//    public static void main(String[] args) {
-//        Solution solution = new Solution();
-//        solution.solution("1zerotwozero3");
-//
-//    }
+    public static void main(String[] args) {
+        Number_String_EnglishWord solution = new Number_String_EnglishWord();
+        solution.solution("1zerotwozero3");
+
+    }
 }
