@@ -28,6 +28,7 @@ class Solution {
                     case 'T': {
                         scores[count] = (int) Math.pow(scores[count], 3);
                         break;
+                        //
                     }
                 }
                 if ( i + 1 < dartResult.length() ) {
