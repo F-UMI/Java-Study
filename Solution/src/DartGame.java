@@ -1,4 +1,14 @@
-class Solution {
+/**
+ * fileName :1st DartGame
+ * author : Yunsup Shin
+ * date : 2021-10-22
+ * description : 1차 다트게임 | https://programmers.co.kr/learn/courses/30/lessons/17682 | 81.2점 ?? 예외 사항 뭘까
+ * ===========================================================
+ * DATE AUTHOR NOTE
+ * -----------------------------------------------------------
+ * 2021-10-21 Yunsup Shin 최초 생성
+ */
+class DartGame {
 
     public int solution(String dartResult) {
         int answer = 0, count = 0;
@@ -9,7 +19,17 @@ class Solution {
             char value = dartResult.charAt(i);
             //1. value이 점수 일경우
             if ( Character.isDigit(value) ) {
-                scores[count] = (int) value;
+                if ( dartResult.charAt(i + 1) == '0' ) {
+                    scores[count] = 10;
+                    System.out.println("1. scores = " + scores[count]);
+                    i++;
+                    continue;
+                } else if ( dartResult.charAt(i) == '0' ) {
+                    scores[count] = 0;
+                    i++;
+                    continue;
+                }
+                scores[count] = Integer.parseInt(String.valueOf(value));
                 System.out.println("1. value = " + value);
             }
             //2. value이 보너스 일경우
@@ -17,7 +37,7 @@ class Solution {
                 System.out.println("2.value = " + value);
                 switch ( value ) {
                     case 'S': {
-                        scores[count] *= scores[count] * 1;
+                        scores[count] = scores[count] * 1;
                         break;
                     }
                     case 'D': {
@@ -31,12 +51,20 @@ class Solution {
                         //
                     }
                 }
-                if ( i + 1 < dartResult.length() ) {
-                    if ( Character.isDigit(dartResult.charAt(i + 1)) ) {
-                        count++;
-                    } else if ( dartResult.charAt(i + 1) == '*' || dartResult.charAt(i + 1) == '#' ) {
-                        continue;
+                try {
+                    if ( i + 1 < dartResult.length() ) {
+                        if ( Character.isDigit(dartResult.charAt(i + 1)) ) {
+                            if (i + 3 < dartResult.length() && dartResult.charAt(i + 3) == '*' ) {
+                                scores[count] *= 2;
+                            }
+                            count++;
+                        } else if ( dartResult.charAt(i + 1) == '*' || dartResult.charAt(i + 1) == '#' ) {
+                            continue;
+                        }
+
                     }
+                } catch ( Exception e ) {
+                    e.printStackTrace();
                 }
             }
             //3. value 이 옵션일경우
@@ -69,6 +97,7 @@ class Solution {
                 }
             }
 
+
         }
         for ( int score : scores ) {
             System.out.println("score = " + score);
@@ -77,4 +106,6 @@ class Solution {
 
         return answer;
     }
+
+
 }
