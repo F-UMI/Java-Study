@@ -4,7 +4,7 @@ public class TESt {
         String[] test1 = test.split("");
         for (int i = 0; i < test1.length; i++){
             if(test1[i].equals(".")) {
-                System.out.println("");
+                System.out.println("ㅇㄴㅁㄴ");
             } else {
                 System.out.println(test1[i]);
             }
