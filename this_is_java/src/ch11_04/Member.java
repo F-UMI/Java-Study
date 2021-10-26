@@ -13,6 +13,6 @@ public class Member {
 	public String toString() {
 		
 		return super.toString();
-	}g()
+	}
 	//시작
 }
