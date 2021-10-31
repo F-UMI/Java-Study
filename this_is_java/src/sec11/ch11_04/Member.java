@@ -8,11 +8,9 @@ public class Member {
 		this.id = id;
 		this.name = name;
 	}
-	
+
 	@Override
 	public String toString() {
-		
-		return super.toString();
+		return  id + ": " + name;
 	}
-	//시작
 }
