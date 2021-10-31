@@ -1,6 +1,6 @@
 package sec11.exam1103_Sort;
 
-public class Member implements Comparable<Member> {
+public class  Member implements Comparable<Member> {
     String name;
 
     public Member(String name) {
