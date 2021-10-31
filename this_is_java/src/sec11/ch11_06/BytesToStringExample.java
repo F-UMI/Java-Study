@@ -1,4 +1,4 @@
-package ch11_06;
+package sec11.ch11_06;
 
 public class BytesToStringExample {
 	public static void main(String[] args) {

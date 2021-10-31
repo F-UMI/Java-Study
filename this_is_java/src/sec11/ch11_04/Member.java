@@ -1,4 +1,4 @@
-package ch11_04;
+package sec11.ch11_04;
 
 public class Member {
 	private String id;

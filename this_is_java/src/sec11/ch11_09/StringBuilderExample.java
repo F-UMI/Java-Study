@@ -1,4 +1,4 @@
-package ch11_09;
+package sec11.ch11_09;
 
 public class StringBuilderExample {
 	public static void main(String[] args) {

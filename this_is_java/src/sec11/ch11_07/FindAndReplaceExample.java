@@ -1,4 +1,4 @@
-package ch11_07;
+package sec11.ch11_07;
 
 public class FindAndReplaceExample {
 	public static void main(String[] args) {

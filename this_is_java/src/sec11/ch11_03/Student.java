@@ -1,4 +1,4 @@
-package ch11_03;
+package sec11.ch11_03;
 
 public class Student {
     private String studentNum;
