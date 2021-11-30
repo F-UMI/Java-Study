@@ -3,8 +3,9 @@ package chap15.Solution.num08;
 import java.util.Objects;
 
 public class Student {
-    public int studentNum;
-    public String name;
+
+  public int studentNum;
+  public String name;
 
   public Student(int studentNum, String name) {
     this.studentNum = studentNum;
@@ -13,14 +14,12 @@ public class Student {
 
   @Override
   public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    if (o instanceof Student) {
+      if (((Student) o).studentNum == this.studentNum) {
+        return true;
+      }
     }
-    if (!(o instanceof Student)) {
-      return false;
-    }
-    Student student = (Student) o;
-    return studentNum == student.studentNum && Objects.equals(name, student.name);
+    return false;
   }
 
   @Override
