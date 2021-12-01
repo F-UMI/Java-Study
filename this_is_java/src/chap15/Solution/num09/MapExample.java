@@ -1,7 +1,9 @@
 package chap15.Solution.num09;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Stream;
 
 public class MapExample {
@@ -15,6 +17,14 @@ public class MapExample {
     String name = null;
     int maxScore = 0;
     int totalScore = 0;
+
+    Set<String> set = map.keySet();
+    Iterator<String> iterator = set.iterator();
+    while (iterator.hasNext()) {
+      String key = iterator.next();
+      Integer value = map.get(key);
+      totalScore += value;
+    }
   }
 
 }

@@ -15,7 +15,8 @@ public class Student {
   @Override
   public boolean equals(Object o) {
     if (o instanceof Student) {
-      if (((Student) o).studentNum == this.studentNum) {
+      Student student = (Student) o;
+      if (studentNum == student.studentNum && name == student.name) {
         return true;
       }
     }
@@ -24,6 +25,6 @@ public class Student {
 
   @Override
   public int hashCode() {
-    return Objects.hash(studentNum, name);
+    return studentNum + name.hashCode();
   }
 }
