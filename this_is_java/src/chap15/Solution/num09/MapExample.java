@@ -24,7 +24,15 @@ public class MapExample {
       String key = iterator.next();
       Integer value = map.get(key);
       totalScore += value;
+      if (value >= maxScore)  {
+        maxScore = value;
+        name = key;
+      }
     }
+    System.out.println("평균점수:" + totalScore / map.size());
+    System.out.println("최고 점수:" + maxScore);
+    System.out.println("최고점수를 받은 아이디:" + name);
+
   }
 
 }
