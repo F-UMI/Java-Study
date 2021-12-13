@@ -11,6 +11,7 @@ class NotSolved2 {
 				if (strDivide[i].charAt(j) == 32) {
 					continue;
 				}
+				
 			}
 			token = strDivide[i].split("");
 			System.out.println(token);
