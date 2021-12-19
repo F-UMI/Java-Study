@@ -18,5 +18,4 @@ public class Student {
     return score;
   }
 
-  
 }
