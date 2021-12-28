@@ -18,4 +18,5 @@ public class Printer {
 	public void println(String n) {
 		System.out.println(n);
 	}
+	
 }
