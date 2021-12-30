@@ -31,4 +31,5 @@ public class DonTLikeTheSameNumber {
         int arr[] = {1, 1, 3, 3, 0, 1, 1};
         solution.solution(arr);
     }
+    
 }
