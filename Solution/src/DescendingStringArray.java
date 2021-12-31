@@ -19,6 +19,7 @@ class DescendingStringArray {
 				upperCount++;
 			}
 		}
+		
 
 		for (int i = 0; i < arrayChar.length - 1; i++) {
 			for (int j = i + 1; j < arrayChar.length; j++) {
