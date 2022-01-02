@@ -1,16 +1,18 @@
-import java.util.HashMap;
-import java.util.Map;
+//효율성 실패
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
 
 public class Athletes_Who_Did_Not_Complete {
     public String solution(String[] participant, String[] completion) {
-        String answer = "";
-        Map<String,Void> map = new HashMap<>();
-        for (int i = 0; i < participant.length; i++){
-            map.put(participant[i],null);
-        }
 
- 
-        
-        return answer;
+        List<String> participantList = new ArrayList<>(Arrays.asList(participant));
+        List<String> completionList = new ArrayList<>(Arrays.asList(completion));
+        Stream<String> participantStream = Arrays.stream(participant);
+        participantStream.filter(completionList::contains).peek(participantList::remove).forEach(completionList::remove);
+        return participantList.get(0);
     }
+
+
 }
