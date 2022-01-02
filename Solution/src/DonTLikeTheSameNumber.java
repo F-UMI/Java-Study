@@ -8,8 +8,7 @@ public class DonTLikeTheSameNumber {
     Stack<Integer> solutionStack = new Stack<>();
     solutionStack.push(arr[0]);
     stream.filter(value -> isSameNumber(value, solutionStack)).forEach(solutionStack::push);
-    Object[] result = solutionStack.toArray();
-    return result;
+    return solutionStack.toArray();
 
   }
 
