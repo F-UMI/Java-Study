@@ -1,7 +1,31 @@
+import java.util.Arrays;
+import java.util.stream.Stream;
+
 //Lv1_ 이상한 문자열 만들기 (?) // 공백이 여러개 일경우 해결하지 못한듯? 68.8 / 21.10.07
-class NotSolved2 { 
-	public String solution(String s) {
-		String answer = "";
+class CreateStrangeStrings {
+    private static final String FIRST_REGEX = " ";
+	private static final String SECOND_REGEX = "";
+
+    public String solution(String s) {
+        Stream<String> stream = Arrays.stream(s.split(FIRST_REGEX));
+        stream.map(s1 -> s1.split(SECOND_REGEX)).peek()
+
+    }
+
+	private static String toWeirdString(String s) {
+
+	}
+
+    private static String toUpperString(String string) {
+        return string.toUpperCase();
+    }
+
+    private static String toLowerString(String string) {
+        return string.toLowerCase();
+    }
+
+
+/*		String answer = "";
 		String[] strDivide = s.split(" ");
 		String[] token = new String[s.length()];
 		String[] tokenSum = new String[strDivide.length];
@@ -32,7 +56,8 @@ class NotSolved2 {
 	}
 
 	public static void main(String[] args) {
-		NotSolved2 sol = new NotSolved2();
+		CreateStrangeStrings sol = new CreateStrangeStrings();
 		System.out.println(sol.solution("try hello world"));
-	}
+	}*/
+
 }
