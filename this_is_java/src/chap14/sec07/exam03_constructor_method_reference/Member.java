@@ -14,6 +14,7 @@ public class Member {
     }
 
     
+    
     public Member(String name, String id) {
         System.out.println("Member(String name, String id)");
         this.name = name;
