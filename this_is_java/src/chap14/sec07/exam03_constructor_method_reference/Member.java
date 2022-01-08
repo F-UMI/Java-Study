@@ -13,6 +13,7 @@ public class Member {
         System.out.println("Member(String id)");
     }
 
+    
     public Member(String name, String id) {
         System.out.println("Member(String name, String id)");
         this.name = name;
