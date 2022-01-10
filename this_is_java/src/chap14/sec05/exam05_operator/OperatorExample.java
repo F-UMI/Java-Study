@@ -26,6 +26,7 @@ public class OperatorExample {
                     else return b;
                 }
         );
+        
         System.out.println("최소값"+  min);
 
     }
