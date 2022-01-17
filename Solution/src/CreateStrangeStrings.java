@@ -1,3 +1,4 @@
+/*
 import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -15,7 +16,9 @@ class CreateStrangeStrings {
   private static String toWeirdString(String[] strings) {
       String weirdString = "";
     for (int i = 0; i < strings.length; i++) {
-        isEven(i) ? toUpperString(strings[i]) : toLowerString(strings[i]);
+*/
+/*        isEven(i) ? toUpperString(strings[i]) : toLowerString(strings[i]);*//*
+
     }
   }
 
@@ -32,6 +35,7 @@ class CreateStrangeStrings {
   }
 
 
+*/
 /*		String answer = "";
 		String[] strDivide = s.split(" ");
 		String[] token = new String[s.length()];
@@ -65,6 +69,8 @@ class CreateStrangeStrings {
 	public static void main(String[] args) {
 		CreateStrangeStrings sol = new CreateStrangeStrings();
 		System.out.println(sol.solution("try hello world"));
-	}*/
+	}*//*
+
 
 }
+*/
