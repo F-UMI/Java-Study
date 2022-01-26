@@ -15,6 +15,7 @@ class deleteMimimumNumber {
 		answer = new int[length - countMinimumNum];
 		int count = 0;
 
+
 		for (int i = 0, j = 0; i < arr.length; i++) {
 			if (arr[i] != elementToDelete) {
 				answer[j] = arr[i];
