@@ -1,38 +1,42 @@
 class Solution {
 
+  private final static int ZERO = 0;
+  private final static int ONE = 1;
   private final static int TWO = 2;
 
   public int[] solution(int N, int[] stages) {
     int[][] failureRateArray = new int[N + 1][TWO];
     enterResult(failureRateArray, stages);
-    double[] failureRate = new double[N];
-    calculateRate(failureRateArray, failureRate);
-    for (int[] ints : failureRateArray) {
+    double[] percentage = new double[N];
+    calculateRate(failureRateArray, percentage);
+    /*for (int[] ints : failureRateArray) {
       System.out.println(ints[0] + "/" + ints[1]);
-    }
+    }*/
     return stages;
   }
 
   private void enterResult(int[][] failureRateArray, int[] stages) {
     for (int stage : stages) {
-      if (stage == 0) {
-        failureRateArray[0][0]++;
+      if (stage == ZERO) {
+        failureRateArray[ZERO][ZERO]++;
       }
       for (int j = 0; j < stage - 1; j++) {
-        failureRateArray[j + 1][0]++;
-        failureRateArray[j][1]++;
+        failureRateArray[j + 1][ZERO]++;
+        failureRateArray[j][ONE]++;
       }
     }
-    failureRateArray[0][0] += failureRateArray[0][1];
+    failureRateArray[ZERO][ZERO] += failureRateArray[ZERO][ONE];
   }
 
-  private void calculateRate(int[][] failureRateArray, double[] failureRate) {
-      for (int i = 0; i < failureRate.length; i++) {
-        failureRate[i] = (double) (failureRateArray[i][0] - failureRateArray[i][1]) / failureRateArray[i][0];
-          System.out.println(failureRate[i]);
-      }
+  private void calculateRate(int[][] failureRateArray, double[] percentage) {
+    for (int i = 0; i < percentage.length; i++) {
+      percentage[i] =
+          (double) (failureRateArray[i][ZERO] - failureRateArray[i][ONE]) / failureRateArray[i][0];
+      /*System.out.println(failureRate[i]);*/
+    }
 
   }
+
 }
 
 
